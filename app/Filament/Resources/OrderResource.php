@@ -39,6 +39,8 @@ class OrderResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?int $navigationSort = 5;
+
     public static function form(Form $form): Form
     {
         return $form
@@ -230,15 +232,20 @@ class OrderResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                ActionGroup::make([
-                    ViewAction::make(),
-                    EditAction::make(),
-                    DeleteAction::make(),
-                ])
+                // ActionGroup::make([
+                //     ViewAction::make(),
+                //     EditAction::make(),
+                //     DeleteAction::make(),
+                // ])
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                // ActionGroup::make([
+                //     ViewAction::make(),
+                //     EditAction::make(),
+                //     DeleteAction::make(),
+                // ])
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
