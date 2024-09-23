@@ -10,10 +10,16 @@
     </head>
     <body class='bg-slate-200 dark:bg-slate-700'>
         @livewire('particals.navbar')
+        
         <main>
             {{ $slot }}
         </main>
         @livewire('particals.footer')
+
         @livewireScripts
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+        <x-livewire-alert::scripts />
     </body>
 </html>
