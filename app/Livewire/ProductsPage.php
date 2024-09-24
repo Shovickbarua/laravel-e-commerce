@@ -11,7 +11,7 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-#[Title('Products - DCodeMania')]
+#[Title('Products - ctg-shop')]
 class ProductsPage extends Component
 {
     use WithPagination, LivewireAlert;

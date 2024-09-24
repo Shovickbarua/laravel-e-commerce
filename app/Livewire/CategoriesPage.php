@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class CategoriesPage extends Component
 {
-    #[Title('Categories - DCodeMania')]
+    #[Title('Categories - ctg-shop')]
     public function render()
     {
         $categories = Category::where('is_active', 1)->get();

@@ -7,7 +7,7 @@ use App\Livewire\Particals\Navbar;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
-#[Title('Product Detail - DCodeMania')]
+#[Title('Product Detail - ctg-shop')]
 class ProductDetailPage extends Component
 {
     use LivewireAlert;

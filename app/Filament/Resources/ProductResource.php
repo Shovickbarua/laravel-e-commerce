@@ -82,7 +82,7 @@ class ProductResource extends Resource
                         TextInput::make('name')
                         ->numeric()
                         ->required()
-                        ->prefix('BDT')
+                        ->prefix('USD')
                     ]),
 
                     Section::make('Associations')->schema([
@@ -130,7 +130,7 @@ class ProductResource extends Resource
                     ->sortable(),
 
                 TextColumn::make('price')
-                    ->money('BDT')
+                    ->money('USD')
                     ->sortable(),
 
                 IconColumn::make('is_active')

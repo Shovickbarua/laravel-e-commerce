@@ -98,12 +98,12 @@ class OrderResource extends Resource
 
                             Select::make('currency')
                                 ->options([
-                                    'bdt' => 'BDT',
+                                    'USD' => 'USD',
                                     'usd' => 'USD',
                                     'eur' => 'EUR',
                                     'gbp' => 'GBP',
                                 ])
-                                ->default('bdt')
+                                ->default('USD')
                                 ->required(),
 
                             Select::make('shipping_method')
@@ -170,7 +170,7 @@ class OrderResource extends Resource
                                 $total += $get("items.{$key}.total_amount");
                             }
                             $set('grand_total', $total);
-                            return Number::currency($total, 'BDT');
+                            return Number::currency($total, 'USD');
                         }),
 
                         Hidden::make('grand_total')
@@ -192,7 +192,7 @@ class OrderResource extends Resource
                 TextColumn::make('grand_total')
                     ->numeric()
                     ->sortable()
-                    ->money('BDT'),
+                    ->money('USD'),
 
                 TextColumn::make('payment_method')
                     ->searchable()

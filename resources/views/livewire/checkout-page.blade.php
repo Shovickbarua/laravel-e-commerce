@@ -113,7 +113,7 @@
 							Subtotal
 						</span>
 						<span>
-							{{ Number::currency($grand_total, 'BDT') }}
+							{{ Number::currency($grand_total, 'USD') }}
 						</span>
 					</div>
 					<div class="flex justify-between mb-2 font-bold">
@@ -121,7 +121,7 @@
 							Taxes
 						</span>
 						<span>
-							{{ Number::currency(0, 'BDT') }}
+							{{ Number::currency(0, 'USD') }}
 						</span>
 					</div>
 					<div class="flex justify-between mb-2 font-bold">
@@ -138,7 +138,7 @@
 							Grand Total
 						</span>
 						<span>
-							{{ Number::currency($grand_total, 'BDT') }}
+							{{ Number::currency($grand_total, 'USD') }}
 						</span>
 					</div>
 					</hr>
@@ -167,7 +167,7 @@
 										</p>
 									</div>
 									<div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-										{{ Number::currency($ci['total_amount'], 'BDT') }}
+										{{ Number::currency($ci['total_amount'], 'USD') }}
 									</div>
 								</div>
 							</li>

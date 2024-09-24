@@ -6,7 +6,7 @@ use App\Helpers\CartManagement;
 use App\Livewire\Particals\Navbar;
 use Livewire\Component;
 
-#[Title('Cart - DCodeMania')]
+#[Title('Cart - ctg-shop')]
 class CartPage extends Component
 {
     public $cart_items = [];
