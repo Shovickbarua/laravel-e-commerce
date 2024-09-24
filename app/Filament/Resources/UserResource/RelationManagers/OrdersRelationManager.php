@@ -4,11 +4,12 @@ namespace App\Filament\Resources\UserResource\RelationManagers;
 
 use App\Filament\Resources\OrderResource;
 use App\Models\Order;
-use Filament\Actions\Modal\Actions\Action;
+
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -22,9 +23,7 @@ class OrdersRelationManager extends RelationManager
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('id')
-                    ->required()
-                    ->maxLength(255),
+                
             ]);
     }
 
@@ -49,7 +48,7 @@ class OrdersRelationManager extends RelationManager
                         'delivered' => 'success',
                         'cancelled' => 'danger',
                     })
-                    ->icons(fn (string $state): string => match ($state){
+                    ->icon(fn (string $state): string => match ($state){
                         'new'=> 'heroicon-m-sparkles',
                         'processing' => 'heroicon-m-arrow-path',
                         'shipped' => 'heroicon-m-truck',
@@ -75,7 +74,7 @@ class OrdersRelationManager extends RelationManager
                 //
             ])
             ->headerActions([
-                Tables\Actions\CreateAction::make(),
+                // Tables\Actions\CreateAction::make(),
             ])
             ->actions([
                 Action::make('View Order')

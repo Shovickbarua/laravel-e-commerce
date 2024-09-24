@@ -42,7 +42,7 @@ class LatestOrders extends BaseWidget
                         'delivered' => 'success',
                         'cancelled' => 'danger',
                     })
-                    ->icons(fn (string $state): string => match ($state){
+                    ->icon(fn (string $state): string => match ($state){
                         'new'=> 'heroicon-m-sparkles',
                         'processing' => 'heroicon-m-arrow-path',
                         'shipped' => 'heroicon-m-truck',
@@ -63,11 +63,11 @@ class LatestOrders extends BaseWidget
                     TextColumn::make('created_at')
                         ->label('Order Date')
                         ->dateTime()
+                ])
+                ->actions([
+                    // Action::make('View Order')
+                    //     ->url(fn (Order $record): string => OrderResource::getUrl('view', ['record' => $record]))
+                    //     ->icon('heroicon-m-eye')
                 ]);
-            // ->actions([
-                // Action::make('View Order')
-                //     ->url(fn (Order $record): string => OrderResource::getUrl('view', ['record' => $record]))
-                //     ->icon('heroicon-m-eye')
-            // ]);
     }
 }

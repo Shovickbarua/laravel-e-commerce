@@ -59,6 +59,7 @@ class ProductResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->disabled()
+                            ->dehydrated()
                             ->unique(Product::class, 'slug', ignoreRecord:true),
 
                         MarkdownEditor::make('description')
@@ -162,11 +163,11 @@ class ProductResource extends Resource
                     ->relationship('category', 'name')
             ])
             ->actions([
-                ActionGroup::make([
-                    ViewAction::make(),
-                    EditAction::make(),
-                    DeleteAction::make(),
-                ]),
+                // ActionGroup::make([
+                //     ViewAction::make(),
+                //     EditAction::make(),
+                //     DeleteAction::make(),
+                // ]),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
