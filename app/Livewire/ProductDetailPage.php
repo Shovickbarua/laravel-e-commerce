@@ -5,9 +5,10 @@ namespace App\Livewire;
 use App\Helpers\CartManagement;
 use App\Livewire\Particals\Navbar;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Product Detail - ctg-shop')]
+#[Title('Product Detail - Quantam')]
 class ProductDetailPage extends Component
 {
     use LivewireAlert;

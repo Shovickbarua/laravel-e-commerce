@@ -4,11 +4,12 @@ namespace App\Livewire;
 
 use App\Models\Brand;
 use App\Models\Category;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
+#[Title('Home Page - Quantam')]
 class HomePage extends Component
 {
-    #[Title('Home Page - ctg-shop')]
     public function render()
     {
         $brands = Brand::where('is_active', 1)->get();

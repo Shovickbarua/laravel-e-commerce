@@ -4,9 +4,10 @@ namespace App\Livewire;
 
 use App\Helpers\CartManagement;
 use App\Livewire\Particals\Navbar;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Cart - ctg-shop')]
+#[Title('Cart - Quantam')]
 class CartPage extends Component
 {
     public $cart_items = [];

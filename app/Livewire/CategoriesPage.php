@@ -3,11 +3,13 @@
 namespace App\Livewire;
 
 use App\Models\Category;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
+#[Title('Categories - Quantam')]
 class CategoriesPage extends Component
 {
-    #[Title('Categories - ctg-shop')]
+
     public function render()
     {
         $categories = Category::where('is_active', 1)->get();
