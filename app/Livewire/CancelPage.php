@@ -5,7 +5,7 @@ namespace App\Livewire;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Cancel - Quantam')]
+#[Title('Cancel - Nebulacore')]
 class CancelPage extends Component
 {
     public function render()

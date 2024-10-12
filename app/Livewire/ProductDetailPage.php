@@ -8,7 +8,7 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Product Detail - Quantam')]
+#[Title('Product Detail - Nebulacore')]
 class ProductDetailPage extends Component
 {
     use LivewireAlert;

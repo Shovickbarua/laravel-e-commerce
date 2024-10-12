@@ -13,7 +13,7 @@ use Livewire\Attributes\Url;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-#[Title('Products - Quantam')]
+#[Title('Products - Nebulacore')]
 class ProductsPage extends Component
 {
     use WithPagination, LivewireAlert;

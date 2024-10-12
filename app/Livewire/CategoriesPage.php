@@ -6,7 +6,7 @@ use App\Models\Category;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Categories - Quantam')]
+#[Title('Categories - Nebulacore')]
 class CategoriesPage extends Component
 {
 
